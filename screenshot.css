@@ -1,0 +1,204 @@
+.canvas-default-size.portrait .street-header,
+.canvas-default-size.portrait.s_12x18 .street-header,
+.canvas-default-size.portrait.s_30x45 .street-header {
+    
+    font-size: 40px;
+}
+.canvas-default-size.portrait.s_18x24 .street-header,
+.canvas-default-size.portrait.s_45x60 .street-header {
+    
+    font-size: 40px;
+}
+.canvas-default-size.portrait.s_24x36 .street-header,
+.canvas-default-size.portrait.s_60x90 .street-header {
+    
+    font-size: 40px;
+}
+.canvas-default-size.landscape.s_18x12 .street-header,
+.canvas-default-size.landscape.s_45x30 .street-header {
+    
+    font-size: 40px;
+}
+.canvas-default-size.landscape .street-header,
+.canvas-default-size.landscape.s_24x18 .street-header,
+.canvas-default-size.landscape.s_60x45 .street-header {
+    
+    font-size: 40px;
+}
+.canvas-default-size.landscape.s_36x24 .street-header,
+.canvas-default-size.landscape.s_90x60 .street-header {
+    
+    font-size: 40px;
+}
+.canvas-default-size.square.s_12x12 .street-header,
+.canvas-default-size.square.s_30x30 .street-header {
+    
+    font-size: 40px;
+}
+.canvas-default-size.square .street-header,
+.canvas-default-size.square.s_18x18 .street-header,
+.canvas-default-size.square.s_45x45 .street-header {
+    
+    font-size: 40px;
+}
+
+.canvas-default-size.square.s_30x30 .street-header,
+.canvas-default-size.square.s_76x76 .street-header {
+    
+    font-size: 40px;
+}
+
+
+.canvas-default-size.portrait .street-divider,
+.canvas-default-size.portrait.s_12x18 .street-divider,
+.canvas-default-size.portrait.s_30x45 .street-divider {
+    
+    font-size: 30px;
+}
+.canvas-default-size.portrait.s_18x24 .street-divider,
+.canvas-default-size.portrait.s_45x60 .street-divider {
+    
+    font-size: 30px;
+}
+.canvas-default-size.portrait.s_24x36 .street-divider,
+.canvas-default-size.portrait.s_60x90 .street-divider {
+    
+    font-size: 30px;
+}
+.canvas-default-size.landscape.s_18x12 .street-divider,
+.canvas-default-size.landscape.s_45x30 .street-divider {
+    
+    font-size: 30px;
+}
+.canvas-default-size.landscape .street-divider,
+.canvas-default-size.landscape.s_24x18 .street-divider,
+.canvas-default-size.landscape.s_60x45 .street-divider {
+    
+    font-size: 30px;
+}
+.canvas-default-size.landscape.s_36x24 .street-divider,
+.canvas-default-size.landscape.s_90x60 .street-divider {
+    
+    font-size: 30px;
+}
+.canvas-default-size.square.s_12x12 .street-divider,
+.canvas-default-size.square.s_30x30 .street-divider {
+    
+    font-size: 30px;
+}
+.canvas-default-size.square .street-divider,
+.canvas-default-size.square.s_18x18 .street-divider,
+.canvas-default-size.square.s_45x45 .street-divider {
+    
+    font-size: 30px;
+}
+
+.canvas-default-size.square.s_30x30 .street-divider,
+.canvas-default-size.square.s_76x76 .street-divider {
+    
+    font-size: 30px;
+}
+
+
+
+.canvas-default-size.portrait .street-tagline,
+.canvas-default-size.portrait.s_12x18 .street-tagline,
+.canvas-default-size.portrait.s_30x45 .street-tagline {
+    
+    font-size: 25px;
+}
+.canvas-default-size.portrait.s_18x24 .street-tagline,
+.canvas-default-size.portrait.s_45x60 .street-tagline {
+    
+    font-size: 25px;
+}
+.canvas-default-size.portrait.s_24x36 .street-tagline,
+.canvas-default-size.portrait.s_60x90 .street-tagline {
+    
+    font-size: 25px;
+}
+.canvas-default-size.landscape.s_18x12 .street-tagline,
+.canvas-default-size.landscape.s_45x30 .street-tagline {
+    
+    font-size: 25px;
+}
+.canvas-default-size.landscape .street-tagline,
+.canvas-default-size.landscape.s_24x18 .street-tagline,
+.canvas-default-size.landscape.s_60x45 .street-tagline {
+    
+    font-size: 25px;
+}
+.canvas-default-size.landscape.s_36x24 .street-tagline,
+.canvas-default-size.landscape.s_90x60 .street-tagline {
+    
+    font-size: 25px;
+}
+.canvas-default-size.square.s_12x12 .street-tagline,
+.canvas-default-size.square.s_30x30 .street-tagline {
+    
+    font-size: 25px;
+}
+.canvas-default-size.square .street-tagline,
+.canvas-default-size.square.s_18x18 .street-tagline,
+.canvas-default-size.square.s_45x45 .street-tagline {
+    
+    font-size: 25px;
+}
+
+.canvas-default-size.square.s_30x30 .street-tagline,
+.canvas-default-size.square.s_76x76 .street-tagline {
+    
+    font-size: 25px;
+}
+
+
+
+.canvas-default-size.portrait .street-subline,
+.canvas-default-size.portrait.s_12x18 .street-subline,
+.canvas-default-size.portrait.s_30x45 .street-subline {
+    
+    font-size: 20px;
+}
+.canvas-default-size.portrait.s_18x24 .street-subline,
+.canvas-default-size.portrait.s_45x60 .street-subline {
+    
+    font-size: 20px;
+}
+.canvas-default-size.portrait.s_24x36 .street-subline,
+.canvas-default-size.portrait.s_60x90 .street-subline {
+    
+    font-size: 20px;
+}
+.canvas-default-size.landscape.s_18x12 .street-subline,
+.canvas-default-size.landscape.s_45x30 .street-subline {
+    
+    font-size: 20px;
+}
+.canvas-default-size.landscape .street-subline,
+.canvas-default-size.landscape.s_24x18 .street-subline,
+.canvas-default-size.landscape.s_60x45 .street-subline {
+    
+    font-size: 20px;
+}
+.canvas-default-size.landscape.s_36x24 .street-subline,
+.canvas-default-size.landscape.s_90x60 .street-subline {
+    
+    font-size: 20px;
+}
+.canvas-default-size.square.s_12x12 .street-subline,
+.canvas-default-size.square.s_30x30 .street-subline {
+    
+    font-size: 20px;
+}
+.canvas-default-size.square .street-subline,
+.canvas-default-size.square.s_18x18 .street-subline,
+.canvas-default-size.square.s_45x45 .street-subline {
+    
+    font-size: 20px;
+}
+
+.canvas-default-size.square.s_30x30 .street-subline,
+.canvas-default-size.square.s_76x76 .street-subline {
+    
+    font-size: 20px;
+}
