@@ -1,10 +1,14 @@
 var wcdf_functions = {};
     var _constellation_on = true;
     var _grid_on = true;
+    var _width_new = 300;
+    var _height_new = 300;
+    var _port = 'portrait';
+    var _port_inch = 'default';
 var planetarium;
         S(document).ready(function(){
             skydefault = S.virtualsky();
-            planetarium = S.virtualsky({id:'starmapPreview',width:300,height:300});
+            planetarium = S.virtualsky({id:'starmapPreview',width:_width_new,height:_height_new});
             planetarium.draw();
             update();
         });
@@ -747,6 +751,38 @@ jQuery(function ($) {
 //     }, 500);
 
     function resizeCanvas() {
+        let $_globSize = [];
+$_globSize['portrait'] = {
+						's_12x18' : {'width' : '800','height': '800'},
+						's_30x45' : {'width' : '800','height': '800'},
+						's_18x24' : {'width' : '1200','height': '1200'},
+						's_45x60' : {'width' : '1200','height': '1200'},
+						's_24x36' : {'width' : '1600','height': '1600'},
+						's_60x90' : {'width' : '1600','height': '1600'},
+						'default' : {'width' : '800','height': '800'}
+					};
+$_globSize['landscape'] = {
+						's_18x12' : {'width' : '700','height': '700'},
+						's_45x30' : {'width' : '700','height': '700'},
+						's_24x18' : {'width' : '1000','height': '1000'},
+						's_60x45' : {'width' : '1000','height': '1000'},
+						's_36x24' : {'width' : '1400','height': '1400'},
+						's_90x60' : {'width' : '1400','height': '1400'},
+						'default' : {'width' : '700','height': '700'}
+					};
+$_globSize['square'] = {
+						's_12x12' : {'width' : '650','height': '650'},
+						's_30x30' : {'width' : '650','height': '650'},
+						's_18x18' : {'width' : '1000','height': '1000'},
+						's_45x45' : {'width' : '1000','height': '1000'},
+						's_30x30' : {'width' : '1700','height': '1700'},
+						's_76x76' : {'width' : '1700','height': '1700'},
+						'default' : {'width' : '650','height': '650'}
+					};
+            let __siize = $_globSize[_port][_port_inch];
+            _width_new = __siize.width;
+            _height_new = __siize.height;
+             setStarMap();
         // canvas.width = $("#canvas-lineart").innerWidth() - '40';
         // canvas.height = $("#canvas-lineart").innerHeight() - '40';
         // cpkDrawCanvas(); 
@@ -867,6 +903,8 @@ jQuery(function ($) {
         $("#canvas-lineart").removeClass();
         $("#canvas-lineart").addClass("canvas-default-size");
         $("#canvas-lineart").addClass(trimValue(layout));
+        _port = trimValue(layout);
+        
         resizeCanvas();
     });
     $('.cpk-size-inch').change(function(){
@@ -876,6 +914,7 @@ jQuery(function ($) {
         var layout = $("#cpk-size-selector input:checked").val();
         $("#canvas-lineart").addClass(trimValue(layout));
         $("#canvas-lineart").addClass("s_"+trimValue(size).toString());
+        _port_inch = "s_"+trimValue(size).toString();
         resizeCanvas();
     });
 
