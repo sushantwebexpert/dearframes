@@ -904,7 +904,7 @@ $_globSize['square'] = {
         $("#canvas-lineart").addClass("canvas-default-size");
         $("#canvas-lineart").addClass(trimValue(layout));
         _port = trimValue(layout);
-        
+        _port_inch = 'default';
         resizeCanvas();
     });
     $('.cpk-size-inch').change(function(){
