@@ -865,8 +865,10 @@ $_globSize['square'] = {
 
     $("#starglobe-date input").change(function() {
         _date = jQuery("#starglobe-date input").val();
-	    if(_date == ''){_date = new Date()};
-              let _ned = new Date(_date + ' ' + _time);
+	     if(_date == ''){_date = new Date();_ned=_date;}
+		else {
+		      let _ned = new Date(_date + ' ' + _time);
+		}
                         console.log(typeof _ned);
                         console.log(_ned);
              let _el = {name:'clock',value: _ned.toString()};
