@@ -669,7 +669,7 @@ jQuery(function ($) {
             geocoder.addTo('#street_geocoder');
             geocoder.on('result', function (e) {
 
-              console.log(e);
+//               console.log(e);
               let _loc = trimPlace(e.result.place_name);
               line_1 = _loc[0];
               line_2 = _loc.slice(-1).pop();
@@ -708,10 +708,10 @@ jQuery(function ($) {
         $(".street-labels .street-subline").text(line_4);
 
         if( _date && _time ){
-            console.log(typeof _date);
-            console.log(typeof _time);
-            console.log(_date);
-            console.log(_time);
+//             console.log(typeof _date);
+//             console.log(typeof _time);
+//             console.log(_date);
+//             console.log(_time);
 
 //             let _ned = new Date(_date + ' ' + _time);
 //                         console.log(typeof _ned);
@@ -865,12 +865,13 @@ $_globSize['square'] = {
 
     $("#starglobe-date input").change(function() {
         _date = jQuery("#starglobe-date input").val();
-	     if(_date == ''){_date = new Date();_ned=_date;}
+	    var _ned = _date;
+	     if(_date == ''){_date = new Date();_ned =_date;}
 		else {
-		      let _ned = new Date(_date + ' ' + _time);
+		      _ned = new Date(_date + ' ' + _time);
 		}
-                        console.log(typeof _ned);
-                        console.log(_ned);
+//                         console.log(typeof _ned);
+//                         console.log(_ned);
              let _el = {name:'clock',value: _ned.toString()};
             update(_el);
         setStarMap();
