@@ -303,6 +303,7 @@ jQuery(function ($) {
         Valentine :   'allure',
         Humble :   'turquoise',
         Playroom :   'cinnamon',
+        Pantone :   'pantone',
         Nära :   'skyway',
         Gaia :   'denim'
     };
