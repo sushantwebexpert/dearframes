@@ -860,6 +860,9 @@ $_globSize['square'] = {
         $("#outer-lineart").addClass("outer-lineart");
         $("#outer-lineart").addClass(_thm);
         _current_Style = _bgcolor[_thm];
+	    if('gaia' == _thm){
+		    _current_Style = {font_color : '#000000',background_color: '#f9f1e7',bg_color: '#aa5c14'};
+	    }
         setStarMap();
     });
 
