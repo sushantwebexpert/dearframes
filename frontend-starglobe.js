@@ -493,14 +493,14 @@ jQuery(function ($) {
     lineArtStyle['Quote (Playful)'] = {fontSize: ' 1em ',fontWeight: 'normal',fontFamily: 'cursive'};
 
     const _bgcolor = [];
-    _bgcolor['modern'] = {font_color : '#000000',background_color: '#ffffff',bg_color: '#ffffff'};
-    _bgcolor['asphalt'] = {font_color : '#ffffff',background_color: '#172731',bg_color: '#2c404b'};
-    _bgcolor['nautical'] = {font_color : '#335e61',background_color: '#fdf7ef',bg_color: '#b9dccd'};
-    _bgcolor['retro'] = {font_color : '#df2828',background_color: '#a0d2cf',bg_color: '#f6fae5'};
-    _bgcolor['dark'] = {font_color : '#ffffff',background_color: '#333333',bg_color: '#333333'};
-    _bgcolor['bright'] = {font_color : '#ffffff',background_color: '#ffffff',bg_color: '#333333'};
-    _bgcolor['nisshki'] = {font_color : '#ffffff',background_color: '#ffffff',bg_color: '#c00b32'};
-    _bgcolor['gaia'] = {font_color : '#ffffff',background_color: '#f9f1e7',bg_color: '#aa5c14'};
+    _bgcolor['modern'] = {font_color : '#000000',background_color: '#ffffff',bg_color: '#ffffff',txt_color: '#000000'};
+    _bgcolor['asphalt'] = {font_color : '#ffffff',background_color: '#172731',bg_color: '#2c404b',txt_color: '#ffffff'};
+    _bgcolor['nautical'] = {font_color : '#335e61',background_color: '#fdf7ef',bg_color: '#b9dccd',txt_color: '#000000'};
+    _bgcolor['retro'] = {font_color : '#df2828',background_color: '#a0d2cf',bg_color: '#f6fae5',txt_color: '#ffffff'};
+    _bgcolor['dark'] = {font_color : '#ffffff',background_color: '#333333',bg_color: '#333333',txt_color: '#ffffff'};
+    _bgcolor['bright'] = {font_color : '#ffffff',background_color: '#ffffff',bg_color: '#333333',txt_color: '#000000'};
+    _bgcolor['nisshki'] = {font_color : '#ffffff',background_color: '#ffffff',bg_color: '#c00b32',txt_color: '#000000'};
+    _bgcolor['gaia'] = {font_color : '#ffffff',background_color: '#f9f1e7',bg_color: '#aa5c14',txt_color: '#000000'};
 
     const _color = [];
     _color['white'] = {font_color : '#ffffff',background_color: '#ffffff'};
@@ -545,10 +545,6 @@ jQuery(function ($) {
         let _x = (canvas.width)/2;
         let _y = canvas.height - 20;
 
-    if('gaia' == _currentStyle){
-    _current_Style = {font_color : '#000000',background_color: '#f9f1e7',bg_color: '#aa5c14'};
-    }
-
         let _Style = lineArtStyle[style];
 //         console.log(style);
 //         console.log(_Style);
@@ -560,7 +556,7 @@ jQuery(function ($) {
             ctx.fillRect(0, (_y - 80), canvas.width, (_y - 80));
             ctx.fillStyle = 'black';
         } else {
-            ctx.fillStyle = _current_Style.font_color;
+            ctx.fillStyle = _current_Style.txt_color;
         }
  ctx.fillStyle = _current_Style.font_color;
         ctx.textAlign = "center";
