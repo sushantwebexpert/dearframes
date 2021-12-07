@@ -6,6 +6,7 @@ var wcdf_functions = {};
     var _port = 'portrait';
     var _port_inch = 'default';
 var planetarium;
+var _currentStyle;
         S(document).ready(function(){
             skydefault = S.virtualsky();
             planetarium = S.virtualsky({id:'starmapPreview',width:_width_new,height:_height_new});
@@ -544,6 +545,10 @@ jQuery(function ($) {
         let _x = (canvas.width)/2;
         let _y = canvas.height - 20;
 
+    if('gaia' == _currentStyle){
+    _current_Style = {font_color : '#000000',background_color: '#f9f1e7',bg_color: '#aa5c14'};
+    }
+
         let _Style = lineArtStyle[style];
 //         console.log(style);
 //         console.log(_Style);
@@ -855,14 +860,12 @@ $_globSize['square'] = {
         var stic = jQuery("#lineart-theme input:checked").val();
         var theme = stic.split("_");
         var _thm = theme[0].replace(/[^a-z0-9\s]/gi, '').replace(/[_\s]/g, ' ').toLowerCase();
+       _currentStyle = _thm;
         // console.log(_thm);
         $("#outer-lineart").removeClass();
         $("#outer-lineart").addClass("outer-lineart");
         $("#outer-lineart").addClass(_thm);
         _current_Style = _bgcolor[_thm];
-	    if('gaia' == _thm){
-		    _current_Style = {font_color : '#000000',background_color: '#f9f1e7',bg_color: '#aa5c14'};
-	    }
         setStarMap();
     });
 
