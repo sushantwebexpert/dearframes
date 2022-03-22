@@ -57,7 +57,17 @@ jQuery(function ($) {
         'imagenery',
         'smooth',
         'smoothdark',
-        'opentopomap'
+        'opentopomap',
+        'cartodbdarkmatter',
+        'cartodbpositron',
+        'cartodbvoyager',
+        'cartodbvoyagernolabels',
+        'jawgstreets',
+        'jawgdark',
+        'jawglight',
+        'stadiaalidadesmooth',
+        'stadiaalidadesmoothdark',
+        'stadiaosmbright'
     ];
 
     var customStyle2 = [
@@ -68,6 +78,7 @@ jQuery(function ($) {
 
         if(map2 === null){
             map2 = L.map('leaflet-map').setView([48.230651, 11.47757], 13);
+// 					L.path({stroke: false}).addTo(map2);
         }
 
         if(leaf_style.includes(default_class) && customStyle2.includes(customStyle_new)) {
@@ -75,6 +86,9 @@ jQuery(function ($) {
             $('#street-map').hide();
             console.log('default_class',default_class);
             draw_map_leaf(center, zoom, map_style, marker);
+			draw_map_leaf(center, zoom, map_style, marker); 
+			draw_map_leaf(center, zoom, map_style, marker); 
+			draw_map_leaf(center, zoom, map_style, marker);
         } else if(original.includes(default_class) && customStyle2.includes(customStyle_new)) {
             $('#street-map').show();
             $('#leaflet-map').hide();
@@ -85,13 +99,16 @@ jQuery(function ($) {
             $('#street-map').hide();
             console.log('N3 default_class',default_class);
             draw_map_leaf(center, zoom, map_style, marker);
+			draw_map_leaf(center, zoom, map_style, marker); 
+			draw_map_leaf(center, zoom, map_style, marker); 
+			draw_map_leaf(center, zoom, map_style, marker);
         } else {
              $('#street-map').show();
             $('#leaflet-map').hide();
             console.log('N2 default_class',default_class);
             draw_map_mapbox(center, zoom, map_style, marker);
         }
-
+		mapResize();
     }
 
     function draw_map_mapbox(center = default_center, zoom = default_zoom, map_style = default_style, marker = default_marker) {
@@ -239,6 +256,73 @@ jQuery(function ($) {
                 maxZoom: 22
             }).addTo(map2);//#p
             break;
+
+
+case 'cartodbdarkmatter':
+            L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+                attribution: '',
+                maxZoom: 22
+            }).addTo(map2);//#p
+            break;
+case 'cartodbpositron':
+            L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+                attribution: '',
+                maxZoom: 22
+            }).addTo(map2);//#p
+            break;
+case 'cartodbvoyager':
+            L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+                attribution: '',
+                maxZoom: 22
+            }).addTo(map2);//#p
+            break;
+case 'cartodbvoyagernolabels':
+            L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', {
+                attribution: '',
+                maxZoom: 22
+            }).addTo(map2);//#p
+            break;
+case 'jawgstreets':
+            L.tileLayer('https://{s}.tile.jawg.io/jawg-streets/{z}/{x}/{y}{r}.png?access-token={accessToken}', {
+                attribution: '',
+                maxZoom: 22,
+                 accessToken: 'nfU3MOgjI485m9ZJmpXd2qScHiVjubZ7BYLqFfTtfLBjBOeyueOvUJNUCp5OofKU'
+                }).addTo(map2);//#p
+            break;
+case 'jawgdark':
+            L.tileLayer('https://{s}.tile.jawg.io/jawg-dark/{z}/{x}/{y}{r}.png?access-token={accessToken}', {
+                attribution: '',
+                maxZoom: 22,
+                 accessToken: 'nfU3MOgjI485m9ZJmpXd2qScHiVjubZ7BYLqFfTtfLBjBOeyueOvUJNUCp5OofKU'
+            }).addTo(map2);//#p
+            break;
+case 'jawglight':
+            L.tileLayer('https://{s}.tile.jawg.io/jawg-light/{z}/{x}/{y}{r}.png?access-token={accessToken}', {
+                attribution: '',
+                maxZoom: 22,
+                 accessToken: 'nfU3MOgjI485m9ZJmpXd2qScHiVjubZ7BYLqFfTtfLBjBOeyueOvUJNUCp5OofKU'
+            }).addTo(map2);//#p
+            break;
+case 'stadiaalidadesmooth':
+            L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png', {
+                attribution: '',
+                maxZoom: 22
+            }).addTo(map2);//#p
+            break;
+case 'stadiaalidadesmoothdark':
+            L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
+                attribution: '',
+                maxZoom: 22
+            }).addTo(map2);//#p
+            break;
+case 'stadiaosmbright':
+            L.tileLayer('https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}{r}.png', {
+                attribution: '',
+                maxZoom: 22
+            }).addTo(map2);//#p
+            break;
+
+            
           
         }
 map_live = 'map2';
